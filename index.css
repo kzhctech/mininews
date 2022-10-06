@@ -1,0 +1,560 @@
+#myDIV{
+  height: 225px;
+  width: 100%;
+  overflow: auto;
+}
+.mb-75{
+  margin-bottom: 75px;
+}
+.match
+{
+    color:black;
+}
+#Teambat1name,#Teambat2name{
+  font-size: 22px;
+  font-weight: 600;
+}
+.gwrap{
+  display:flex;
+  justify-content:center;
+}
+@media only screen and (min-width: 1100px) {
+  #adv{
+  position: absolute;
+  width: 350px;
+  z-index: 999999;
+  background-color: white;
+  padding-top: 0px;
+  margin-top: 60px;
+  padding-left: 15px;
+  padding-right: 15px;
+  }
+  .gwrap{
+    padding: 50px 50px;
+    background-position-y: 400px;
+    background-image:url('ground.jpg');
+  }
+  .ground{
+    transform: rotateX(35deg) scaleX(3.8);
+    perspective: 300px;
+    background: transparent!important;
+    transform-style: preserve-3d;
+    background-size: cover;
+    margin-left: 50px;
+  }
+  #myDIV{
+    height: 250px;
+  }
+}
+#adv{
+  position: absolute;
+  z-index: 999999;
+  width: 245px;
+  background-color: white;
+  margin-top: 90px;
+  display: none;
+}
+.ground{
+  background-color: green;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* border-top-right-radius: 25%;
+  border-top-left-radius: 25%; */
+}
+.cercel{
+  height: 120px;
+  width: 120px;
+  border:1px dotted white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.wicket{
+  height: 40px;
+  width: 15px;
+  background-color: yellow;
+  position: relative;
+}
+#ball{
+  height: 12px;
+  width: 12px;
+  background-color: red;
+  position: absolute;
+}
+.filder{
+  background-color: white;
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  border-radius: 50%;
+}
+#f1{
+  top: 50px;
+  right: -90px;
+  
+}
+#f2{
+  top: -50px;
+  right: 90px;
+  
+}
+#f3{
+  top: 60px;
+  right: 40px;
+  
+}
+#f4{
+  top: 60px;
+  left: 40px;
+  
+}
+#f5{
+  top: -25px;
+  left: 40px;
+  
+}
+#f6{
+  top: -25px;
+  right: 40px;
+  
+}
+#f7{
+  top: 120px;
+  left: 65px;
+  
+  
+}
+#f8{
+  top: 120px;
+  right: 65px;
+}
+#f9{
+  top: 10px;
+  right: 100px;
+  
+}
+
+
+/* Midwicket */
+
+@keyframes midwiket-ball{
+  0%{
+    transform: rotate(-25deg);
+  }
+  
+  100%{
+    margin-left: 25px;
+    height: 120px;
+    transform: rotate(-25deg);
+    
+  }
+}
+
+@keyframes midwiket-ball-boundary{
+    0%{
+    transform: rotate(-25deg);
+  }
+  100%{
+    margin-left: 30px;
+    height: 160px;
+    transform: rotate(-25deg);
+  }
+}
+
+@keyframes midwiket-filder{
+  0%{
+  top: 120px;
+  left: 65px;
+  }
+  50%{
+    top: 100px;
+    left: 40px;
+  }
+  100%{
+  top: 120px;
+  left: 65px;
+  }
+}
+
+/* Extracover */
+
+
+@keyframes deepExtracover-ball {
+  0%{
+    transform: rotate(25deg);
+    right: 0;
+  }
+  100%{
+    right: 30px;
+    height: 120px;
+    transform: rotate(25deg);
+  }
+}
+
+@keyframes deepExtracover-filder{
+  0%{
+  top: 120px;
+  left: -65px;
+  }
+  50%{
+    top: 100px;
+    left: -40px;
+  }
+  100%{
+  top: 120px;
+  left: -65px;
+  }
+}
+
+
+@keyframes deepExtracover-ball-boundary{
+  0%{
+    transform: rotate(25deg);
+    right: 0;
+  }
+  100%{
+    right: 30px;
+    height: 160px;
+    transform: rotate(25deg);
+  }
+}
+
+/* Thirdman */
+
+@keyframes thirdman-ball {
+  0%{
+    transform: rotate(140deg);
+    top: 0;
+    left:0;
+  }
+  100%{
+    top: -70px;
+    left: -30px;
+    height: 85px;
+    transform: rotate(140deg);
+  }
+}
+
+@keyframes thirdman-filder{
+  0%{
+  top: -50px;
+  right: 90px;
+  }
+  50%{
+    top: -60px;
+    left: -60px;
+  }
+  100%{
+  top: -50px;
+  right: 90px;
+  }
+}
+
+
+@keyframes thirdman-ball-boundary{
+   0%{
+    transform: rotate(140deg);
+    top: 0;
+    left:0;
+  }
+  100%{
+    top: -110px;
+    left: -40px;
+    height: 125px;
+    transform: rotate(140deg);
+  }
+}
+
+
+/* squreLeg */
+
+
+@keyframes squreLeg-ball {
+ 0%{
+    transform: rotate(-70deg);
+    right: 0;
+    top: 0;
+  }
+  100%{
+    right: -50px;
+    top: -30px;
+    height: 120px;
+    transform: rotate(-70deg);
+  }
+}
+
+@keyframes squreLeg-filder{
+  0%{
+  top: 50px;
+  right: -90px;
+  }
+  50%{
+  top: 35px;
+  right: -85px;
+  }
+  100%{
+  top: 50px;
+  right: -90px;
+  }
+}
+
+
+@keyframes squreLeg-ball-boundary{
+ 0%{
+    transform: rotate(-70deg);
+    right: 0;
+    top: 0;
+  }
+  100%{
+    right: -70px;
+    top: -50px;
+    height: 160px;
+    transform: rotate(-70deg);
+  }
+}
+
+
+/* point */
+
+
+
+@keyframes  point-ball {
+0%{
+    transform: rotate(70deg);
+    right: 0;
+    top: 0;
+  }
+  100%{
+    right: 50px;
+    top: -30px;
+    height: 120px;
+    transform: rotate(70deg);
+  }
+}
+
+@keyframes  point-filder{
+  0%{
+  top: 10px;
+  right: 100px;
+  }
+  50%{
+  top: 40px;
+  right:90px;
+  }
+  100%{
+  top: 10px;
+  right: 100px;
+  }
+}
+
+
+@keyframes  point-ball-boundary{
+0%{
+    transform: rotate(70deg);
+    right: 0;
+    top: 0;
+  }
+  100%{
+    right: 70px;
+    top: -50px;
+    height: 160px;
+    transform: rotate(70deg);
+  }
+}
+
+
+/* midOff */
+
+@keyframes  midOff-ball {
+ 0%{
+    transform: rotate(40deg);
+    right: 0;
+    top: 0;
+  }
+  100%{
+    right: 20px;
+    top: 0px;
+    height: 70px;
+    transform: rotate(40deg);
+  }
+}
+
+@keyframes  midOff-filder{
+  0%{
+  top: 60px;
+  right: 40px;
+  }
+  50%{
+  top: 55px;
+  right: 55px;
+  }
+  100%{
+  top: 60px;
+  right: 40px;
+  }
+}
+
+
+@keyframes  midOff-ball-boundary{
+  0%{
+    top: 0;
+    left: 0;
+  }
+  50%{
+  top: 120px;
+  left :-120px;
+  }
+  100%{
+    top: 0;
+    left: 0;
+  }
+}
+
+
+
+/* midOn */
+
+@keyframes  midOn-ball {
+0%{
+    transform: rotate(-40deg);
+    right: 0;
+    top: 0;
+  }
+  100%{
+    right: -20px;
+    top: 0px;
+    height: 70px;
+    transform: rotate(-40deg);
+  }
+}
+
+@keyframes  midOn-filder{
+  0%{
+  top: 60px;
+  left: 40px;
+  }
+  50%{
+  top: 55px;
+  right: 55px;
+  }
+  100%{
+  top: 60px;
+  left: 40px;
+  }
+}
+
+
+@keyframes  midOn-ball-boundary{
+  0%{
+    top: 0;
+    left: 0;
+  }
+  50%{
+  top: 120px;
+  left :120px;
+  }
+  100%{
+    top: 0;
+    left: 0;
+  }
+}
+
+
+/* fineLeg */
+
+@keyframes  fineLeg-ball {
+0%{
+    transform: rotate(-130deg);
+    right: 0;
+    top: 0;
+  }
+  100%{
+    right: -20px;
+    top: -40px;
+    height: 70px;
+    transform: rotate(-130deg);
+  }
+}
+
+@keyframes  fineLeg-filder{
+  0%{
+  top: -25px;
+  left: 40px;
+  }
+  50%{
+  top: -25px;
+  left: 40px;
+  }
+  100%{
+  top: -25px;
+  left: 40px;
+  }
+}
+
+
+@keyframes  fineLeg-ball-boundary{
+0%{
+    transform: rotate(-130deg);
+    right: 0;
+    top: 0;
+  }
+  100%{
+    right: -50px;
+    top: -100px;
+    height: 150px;
+    transform: rotate(-130deg);
+  }
+}
+
+
+/* gully */
+
+
+
+@keyframes  gully-ball {
+ 0%{
+    transform: rotate(130deg);
+    right: 0;
+    top: 0;
+  }
+  100%{
+    right: 20px;
+    top: -40px;
+    height: 70px;
+    transform: rotate(130deg);
+  }
+}
+
+@keyframes  gully-filder{
+  0%{
+  top: -25px;
+  right: 40px;
+  }
+  100%{
+  top: -25px;
+  right: 40px;
+  }
+}
+
+
+@keyframes  gully-ball-boundary{
+  0%{
+    top: 0;
+    left: 0;
+  }
+  50%{
+  top: -155px;
+  left: -20px;
+  }
+  100%{
+    top: 0;
+    left: 0;
+  }
+}

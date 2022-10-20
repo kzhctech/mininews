@@ -372,5 +372,5 @@ function setPosition(pst,run){
 
 const socket = io('https://balltracker.onrender.com');
 socket.on('match',(status)=> {
-  alert(status.title);
+  console.log(status);
 });

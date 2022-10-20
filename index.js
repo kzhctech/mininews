@@ -9,6 +9,7 @@ var bat1img,bat2img,bowlerimg;
 
 var ballPossition = "";
 var ballEvent;
+var auto = true;
 
 function scroll(){
   let elm = document.getElementById("myDIV");
@@ -304,12 +305,19 @@ setInterval(function() {
 function setPosition(pst,run){
   ballPossition = pst;
   ballEvent = run;
+  document.getElementById("brun").innerHTML = '<span id="text-danger">Manual<span>';
+  auto = false;
 }
-
+setInterval(function() {
+  auto = false;
+ document.getElementById("brun").innerHTML = '<span id="text-success">Auto<span>';
+},1000*20);
 const socket = io('https://balltracker.onrender.com');
 socket.on('match',(status)=> {
   console.log(status);
+  if(auto){
   ballPossition = status.commentry;
   ballEvent = parseInt(status.lb, 10);
+  }
    document.getElementById("brun").innerHTML = status.status;
 });

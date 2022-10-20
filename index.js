@@ -8,6 +8,7 @@ var bat1img,bat2img,bowlerimg;
 
 
 var ballPossition = "";
+var ballEvent;
 
 function scroll(){
   let elm = document.getElementById("myDIV");
@@ -254,74 +255,6 @@ function deepExtracover(run){
   }
 
 
-  function updateScore(sco){
-
-    if(sco.BatName1){
-    document.getElementById("Teambat1name").innerHTML = sco.BatName1;  
-    document.getElementById("bat1Score").innerHTML = sco.BatRun1;
-     let ovr = sco.BatRun1.split(' ');
-    ovr = ovr[ovr.length - 1];
-    console.log(ovr);
-    if (ovr.includes(".")) {
-      hideAD();
-    }
-    else{
-      showAD();
-    }
-    }
- 
-    
-    if(sco.BatName2){
-      document.getElementById("Teambat2name").innerHTML = sco.BatName2;  
-      document.getElementById("bat2Score").innerHTML = sco.BatRun2; 
-      
-    }
-
-
-    
- }
- 
- 
-
-function updateit(sts){
-   document.getElementById("statusbar").innerHTML = sts;  
-}
-function updatePS(sts){
-   document.getElementById("ps").innerHTML = sts;  
-}
-function updateLW(sts){
-   document.getElementById("lw").innerHTML = sts;  
-}
-
-// function updateTitle(tit){
-//    document.getElementById("vs").innerHTML = tit;  
-// }
-
-
-function updateBat1(name,run){
-   document.getElementById("bat1name").innerHTML = name;  
-   document.getElementById("bat1run").innerHTML = run;  
-}
-
-function updateBat2(name,run){
-  document.getElementById("bat2name").innerHTML = name;  
-  document.getElementById("bat2run").innerHTML = run;  
-}
-
-
-function updateBowler(name,over,wiket){
-   document.getElementById("bowlerName").innerHTML = name;
-   document.getElementById("bowlerOW").innerHTML = over + "-" + wiket;  
-}
-
-function updatelbb(lbb,lb){
-   document.getElementById("lbb").innerHTML = lbb;
-   document.getElementById("lb").innerHTML = lb;
-}
-
-
-
-
 setInterval(function() {
   
   //alert(ballPossition);
@@ -376,4 +309,6 @@ function setPosition(pst,run){
 const socket = io('https://balltracker.onrender.com');
 socket.on('match',(status)=> {
   console.log(status);
+  ballPossition = status.commentry;
+  ballEvent = parseInt(status.lb, 10);
 });

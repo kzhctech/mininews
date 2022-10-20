@@ -305,13 +305,17 @@ setInterval(function() {
 function setPosition(pst,run){
   ballPossition = pst;
   ballEvent = run;
-  document.getElementById("brun").innerHTML = '<span id="text-danger">Manual<span>';
+  document.getElementById("sts").innerHTML = 'Manual';
   auto = false;
 }
+
+
 setInterval(function() {
-  auto = false;
- document.getElementById("brun").innerHTML = '<span id="text-success">Auto<span>';
+ auto = true;
+ document.getElementById("sts").innerHTML = 'Auto';
 },1000*20);
+
+
 const socket = io('https://balltracker.onrender.com');
 socket.on('match',(status)=> {
   console.log(status);

@@ -370,55 +370,7 @@ function setPosition(pst,run){
   ballEvent = run;
 }
 
-
-
-// document.querySelector('button').onclick = () => {
-
-//   const text = document.querySelector('input').value;
-//   socket.emit('message', text)
-  
-// }
-
-
-/*
-localStorage.setItem("name", "Smith");
-localStorage.getItem("name");
-*/
-
-function nameSet(){
-  let name = document.getElementById('usrnme').value;
-  localStorage.setItem("name", name);
-}
-
-function chat(){
-  let name;
-  if(!localStorage.getItem("name")){
-    name =  prompt("Please enter your name", "");
-    if (name != null) {
-      localStorage.setItem("name", name);
-      name = localStorage.getItem("name");
-    }
-    else{
-      name = "Announms";
-    }
-  }else{
-    name = localStorage.getItem("name");
-  }
-  let body = document.querySelector('#usrmsg').value;
-  let elm = document.getElementById("myDIV");
-  setTimeout(function() {
-    elm.scrollTop = elm.scrollHeight;
-  }, 300);
-
-console.log(localStorage.getItem("name"));
-
-  elm.scrollTop = elm.scrollHeight;
-  socket.emit('message', {name,body});
-  document.querySelector('#usrmsg').value = "";
-}
-
-// setInterval( function() {
-//   let elm = document.getElementById("myDIV");
-//   elm.scrollTop = elm.scrollHeight;
-//     console.log('hi');
-// },1000);
+const socket = io('https://balltracker.onrender.com');
+socket.on('match',(status)=> {
+  alert(status.title);
+});

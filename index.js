@@ -311,4 +311,5 @@ socket.on('match',(status)=> {
   console.log(status);
   ballPossition = status.commentry;
   ballEvent = parseInt(status.lb, 10);
+   document.getElementById("brun").innerHTML = status.status;
 });

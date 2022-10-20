@@ -6,6 +6,9 @@ var cmnt;
 var dtail;
 var bat1img,bat2img,bowlerimg;
 
+
+var ballPossition = "";
+
 function scroll(){
   let elm = document.getElementById("myDIV");
   setTimeout(function() {

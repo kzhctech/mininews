@@ -313,7 +313,7 @@ function setPosition(pst,run){
 setInterval(function() {
  auto = true;
  document.getElementById("sts").innerHTML = 'Auto';
-},1000*20);
+},1000*60);
 
 
 const socket = io('https://balltracker.onrender.com');

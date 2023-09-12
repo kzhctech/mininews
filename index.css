@@ -55,6 +55,7 @@
   display: none;
 }
 .ground{
+  background-image:url("/IMG-20230911-WA0001.jpg");
   background-color: green;
   height: 250px;
   width: 250px;

@@ -55,8 +55,8 @@
   display: none;
 }
 .ground{
-  background-image:url("/IMG-20230911-WA0001.jpg");
-  background-color: green;
+  background-image:url("https://kzhctech.github.io/mininews/IMG-20230911-WA0001.jpg");
+  background-size: cover;
   height: 250px;
   width: 250px;
   border-radius: 50%;
